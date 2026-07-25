@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ravi Online Medical Shop Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9800,#ff5722);
+height:100vh;
+}
+
+.logo{
+text-align:center;
+color:white;
+font-size:30px;
+font-weight:bold;
+padding-top:40px;
+}
+
+.login-box{
+
+background:white;
+width:85%;
+margin:30px auto;
+padding:25px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 20px #555;
+
+}
+
+h2{
+color:#e65100;
+}
+
+input{
+
+width:90%;
+padding:14px;
+margin:10px;
+border-radius:25px;
+border:2px solid #ff9800;
+font-size:16px;
+
+}
+
+button{
+
+width:90%;
+padding:15px;
+background:#ff6d00;
+color:white;
+border:none;
+border-radius:25px;
+font-size:18px;
+font-weight:bold;
+
+}
+
+button:hover{
+background:#d84315;
+}
+
+a{
+color:#e65100;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="logo">
+
+🩺 RAVI ONLINE<br>
+MEDICAL SHOP
+
+</div>
+
+
+
+<div class="login-box">
+
+<h2>LOGIN</h2>
+
+
+<input id="userid" placeholder="Enter Login ID">
+
+
+<input id="password" type="password" placeholder="Enter Password">
+
+
+<button onclick="login()">
+LOGIN
+</button>
+
+
+<p>
+New User?
+<br>
+<a href="registration.html">
+Create Account
+</a>
+</p>
+
+
+<h3 id="msg"></h3>
+
+
+</div>
+
+
+
+<script>
+
+function login(){
+
+let id=document.getElementById("userid").value;
+let pass=document.getElementById("password").value;
+
+
+let saveID=localStorage.getItem("userID");
+let savePass=localStorage.getItem("userPassword");
+
+
+if(id==saveID && pass==savePass){
+
+document.getElementById("msg").innerHTML=
+"Login Successful ✅";
+
+setTimeout(function(){
+
+window.location="dashboard.html";
+
+},1000);
+
+
+}
+
+else{
+
+document.getElementById("msg").innerHTML=
+"Wrong ID or Password ❌";
+
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
