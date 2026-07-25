@@ -1,1 +1,0 @@
-# ravi-online-medical-shop
