@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ravi Online Medical Shop Registration</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9800,#ff5722);
+}
+
+.box{
+background:white;
+width:85%;
+margin:30px auto;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px #555;
+}
+
+h2{
+color:#e65100;
+}
+
+input,textarea{
+
+width:90%;
+padding:14px;
+margin:8px;
+border-radius:20px;
+border:2px solid #ff9800;
+font-size:16px;
+
+}
+
+button{
+
+width:90%;
+padding:15px;
+background:#ff6d00;
+color:white;
+border:none;
+border-radius:25px;
+font-size:18px;
+font-weight:bold;
+
+}
+
+#result{
+
+color:green;
+font-weight:bold;
+margin-top:20px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+<h2>🩺 RAVI ONLINE<br>MEDICAL SHOP</h2>
+
+<h3>REGISTRATION</h3>
+
+
+<input id="name" placeholder="Enter Full Name">
+
+<input id="mobile" placeholder="Enter Mobile Number">
+
+<input id="email" placeholder="Enter Email">
+
+<textarea id="address" placeholder="Enter Address"></textarea>
+
+
+<button onclick="register()">
+CREATE ACCOUNT
+</button>
+
+
+<div id="result"></div>
+
+
+</div>
+
+
+
+<script>
+
+function register(){
+
+let id="RAVI"+Math.floor(10000+Math.random()*90000);
+
+let password=Math.random().toString(36).slice(-8);
+
+
+document.getElementById("result").innerHTML=
+
+"Registration Successful ✅<br><br>"+
+"Login ID : "+id+
+"<br>Password : "+password+
+"<br><br>Save Your Login Details";
+
+
+localStorage.setItem("userID",id);
+localStorage.setItem("userPassword",password);
+
+}
+
+</script>
+
+
+</body>
+</html>
