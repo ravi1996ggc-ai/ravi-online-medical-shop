@@ -1,4 +1,44 @@
-<!DOCTYPE html>
+function login(){
+
+let email=document.getElementById("email").value;
+
+let password=document.getElementById("password").value;
+
+auth.signInWithEmailAndPassword(email,password)
+
+.then(()=>{
+
+window.location="dashboard.html";
+
+})
+
+.catch(error=>{
+
+alert(error.message);
+
+});
+
+}function register(){
+
+let email=document.getElementById("email").value;
+
+let password=document.getElementById("password").value;
+
+auth.createUserWithEmailAndPassword(email,password)
+
+.then(()=>{
+
+alert("Registration Successful");
+
+})
+
+.catch(error=>{
+
+alert(error.message);
+
+});
+
+}<!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
